@@ -71,6 +71,7 @@ const getRandomMeal = () =>{
 }
 // Add Meal to DOM
 function addToDom(meal){
+    mealsEl.innerHTML = '';
     const ingredients = [];
     for (let i = 1; i<=20; i++ ){
         if (meal[`strIngredient${i}`]){
@@ -96,8 +97,17 @@ ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
 ${ingredients.map(ing => `<li>${ing} </li>`).join('')}
 </ul>
 </div>
+<div onclick="clearData()"><button class='clear-btn'> Clear data</button></div>
 </div>`
 
+}
+
+// clear page
+const clearData = () => {
+    
+    mealsEl.innerHTML = '';
+    singleMealEl.innerHTML = '';
+    
 }
 
 // Event Listeners

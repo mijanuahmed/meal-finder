@@ -139,6 +139,10 @@ border-bottom-right-radius: 4px
     margin: 0 5px 5px 0;
 }
 
+.clear-btn{
+    cursor:pointer;
+}
+
 
 /* @media (max-width: 800px){
     .meals{
